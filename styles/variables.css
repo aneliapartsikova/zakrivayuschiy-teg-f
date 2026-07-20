@@ -21,7 +21,7 @@
   --text-color: #000000;
   --accent-color: #e2a1ff;
   --title-text-color: #000;
-  --content-width: clamp(288px, 80vw, 700px);
+  --content-width: min(100%,700px);
   --card-bg-color: #ffffff;
   --card-border-color: #000000;
   --label-stroke-color: #1a1a1a;

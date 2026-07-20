@@ -9,8 +9,14 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-.like-icon {
+
+.sparks {
+  opacity: 0;
+}
+
+.heart {
   transform-origin: center;
+  transform-box: fill-box;
 }
 
 .contour {

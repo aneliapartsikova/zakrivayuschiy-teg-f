@@ -49,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding-block-end: 100px;
+  padding-block-end: 48px;
 }
 
 .card {
@@ -118,10 +118,10 @@
 
 .card__buttons {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: end;
   gap: 6px;
-  padding: 23px 25px 25px;
+  padding: 26px 25px 25px;
 }
 
 .button {
@@ -166,7 +166,8 @@
 .memory-button__icon {
   position: relative;
   z-index: 2;
-  mix-blend-mode: difference;
+  fill: #000;
+  color: var(--button-hover-bg-colorr);
 }
 
 .card__icon-button:focus {
@@ -179,20 +180,19 @@
 
 .card__icon-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  inline-size: 39px;
+  block-size: 36px;
   padding: 0;
   border: 2px solid transparent;
-  background-color: transparent;
+  background: transparent;
   cursor: pointer;
-  block-size: 38px;
-  inline-size: 39px;
-  transition: border-color 0.3s ease;
+  transition: border-color .3s ease;
 }
 
-.card__like-button {
-  min-inline-size: 130px;
-  block-size: 38px;
+.like-icon {
+  display: block;
 }
 
 .memory-button {
@@ -212,8 +212,8 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  inline-size: min(90vw, 350px);
-  padding: 30px;
+  inline-size: 353px;
+  padding: 30px 40px;
   border: 2px solid var(--dialog-border-color);
   background-color: var(--dialog-bg-color);
   color: var(--dialog-border-color);
@@ -227,11 +227,20 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
+.dialog__content {
+  display:flex;
+  align-items:center;
+  gap: 20px;
+}
+
 .dialog__text {
   font-family: var(--font-family-accent);
   font-size: 0.875rem;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
+  text-transform:uppercase;
+  position: relative;
+  left: 1px;
 }
 
 .dialog__button {
@@ -239,59 +248,60 @@
   block-size: 38px;
 }
 
-.card__image_start {
+.dialog__icon {
+  color: var(--dialog-border-color);
+}
+
+.card__image_grayscale {
   filter: grayscale(0.6);
 }
 
-.card__image_blank-page {
+.card__like-button {
+  inline-size: 132px;
+  block-size: 38px;
+}
+
+.card__image_bright-contrast {
   filter: brightness(1.2) contrast(0.8);
 }
 
-.card__image_fear {
+.card__image_invert-saturate {
   filter: invert(0.15) saturate(1.4);
 }
 
-.card__image_perfectionism {
+.card__image_sepia {
   filter: sepia(0.5);
 }
 
-.card__image_support {
+.card__image_saturate {
   filter: saturate(1.6);
 }
 
-.card__image_new-angle {
+.card__image_hue-rotate {
   filter: hue-rotate(90deg);
 }
 
-.card__image_focus {
+.card__image_blur-dim {
   filter: blur(2px) brightness(0.9);
 }
 
-.card__image_now {
+.card__image_contrast {
   filter: contrast(1.2);
 }
 
 @media (max-width: 377px) {
   .header {
     inline-size: 99%;
-    margin-top: 100px;
     margin-bottom: 100px;
     padding-block: 120px;
-    gap: 20px;
   }
 
   .header__logo {
     font-size: 49px;
-    line-height: 1;
   }
 
   .header__title {
     font-size: 14px;
-    line-height: 1;
-  }
-
-  .content {
-    gap: 50px;
   }
 
   .card {
@@ -304,10 +314,7 @@
   }
 
   .card__image {
-    inline-size: 100%;
     block-size: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
   }
 
   .card__image-label {
@@ -317,18 +324,11 @@
 
   .card__text {
     padding: 25px;
-    gap: 25px;
-    font-size: 18px;
-    line-height: 21px;
   }
 
   .card__buttons {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    gap: 6px;
-    padding: 25px;
+    padding: 4px 20px 27px 20px;
   }
 
   .card__icon-button {
@@ -336,18 +336,21 @@
   }
 
   .card__like-button {
-    inline-size: 130px;
     min-inline-size: 130px;
-    block-size: 38px;
+  }
+
+  .content {
+    padding-bottom:0;
   }
 
   .memory-button {
-    inline-size: calc(100% - 30px);
+    inline-size: 306px;
     min-block-size: 84px;
     block-size: auto;
     flex-direction: column;
     gap: 8px;
     padding: 15px 20px;
+    margin:50px auto 100px;
   }
 
   .memory-button__icon {
@@ -356,7 +359,10 @@
   }
 
   .dialog {
-    inline-size: calc(100% - 30px);
-    padding: 30px;
+    inline-size: 341px;
+  }
+
+  .button__text{
+    white-space: nowrap;
   }
 }

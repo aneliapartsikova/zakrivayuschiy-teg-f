@@ -1,11 +1,6 @@
-<svg class="visually-hidden" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <symbol id="icon-floppy" viewBox="0 0 21 21">
-    <path
-      d="M2 2H15L19 6V19H2V2Z"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1"
-    />
+    <path d="M2 2H15L19 6V19H2V2Z" fill="none" stroke="currentColor" stroke-width="1" />
     <path d="M5 2H13V7H5V2Z" fill="none" stroke="currentColor" stroke-width="1" />
     <path d="M6 12H15V19H6V12Z" fill="none" stroke="currentColor" stroke-width="1" />
   </symbol>

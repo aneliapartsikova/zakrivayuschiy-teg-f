@@ -1,1 +1,1 @@
-https://github.com/aneliapartsikova/zakrivayuschiy-teg-f
+https://aneliapartsikova.github.io/zakrivayuschiy-teg-f/

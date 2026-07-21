@@ -26,7 +26,7 @@
 
 .header__logo {
   font-family: var(--font-family-accent);
-  font-size: 65px;
+  font-size: clamp(28px, 49px, 65px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
@@ -36,7 +36,7 @@
 
 .header__title {
   font-family: var(--font-family-accent);
-  font-size: 23px;
+  font-size: clamp(14px, 23px, 23px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
@@ -166,8 +166,8 @@
 .memory-button__icon {
   position: relative;
   z-index: 2;
-  fill: #000;
-  color: var(--button-hover-bg-colorr);
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .card__icon-button:focus {
@@ -291,7 +291,7 @@
 
 @media (max-width: 377px) {
   .header {
-    inline-size: 99%;
+    inline-size: 100%;
     margin-bottom: 100px;
     padding-block: 120px;
   }
